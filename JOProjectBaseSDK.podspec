@@ -67,7 +67,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = 'JOBaseSDK/**/*.{h,m}'
-  s.source = 'JOBaseSDK/**/*'
+ #s.source = 'JOBaseSDK/**/*'
  #"Classes", "Classes/**/*.{h,m}"
  #s.exclude_files = "Classes/Exclude"
 
