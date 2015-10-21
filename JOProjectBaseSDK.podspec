@@ -7,11 +7,11 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/xinlidexiaoman/JOProjectBaseSDK"
   s.license      = "MIT"
   s.author        = { "Joshua" => "505398605@qq.com" }
-  s.platform     = :ios, "7.0"
+  s.platform     = :ios, '7.0'
   s.source       = { :git => "https://github.com/xinlidexiaoman/JOProjectBaseSDK.git", :tag => s.version}
   s.source_files  = 'JOBaseSDK/**/*'
 
- s.resource = 'JOBaseSDK/Resources/**/*.{png}'
+ s.resource = 'JOBaseSDK/Resources/**/*.{png,txt}'
   #s.resources = ['JOBaseSDK/Resources/**/*.{png}']
 
   # s.framework  = "SomeFramework"
