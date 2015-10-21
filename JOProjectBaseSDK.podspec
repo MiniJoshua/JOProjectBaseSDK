@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.source_files  = 'JOBaseSDK/**/*'
 
   # s.resource  = "icon.png"
-  s.resources = "JOBaseSDK/Resources/**/*"
+  s.resource = "JOBaseSDK/Resources/**/*"
 
   # s.framework  = "SomeFramework"
   # s.frameworks = "SomeFramework", "AnotherFramework"
