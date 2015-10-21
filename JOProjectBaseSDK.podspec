@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.author        = { "Joshua" => "505398605@qq.com" }
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/xinlidexiaoman/JOProjectBaseSDK.git", :tag => s.version}
-  s.source_files  = 'JOBaseSDK/**/*.{h,m}'
+  s.source_files  = 'JOProjectBaseSDK/JOBaseSDK/*.{h,m}'
  #s.source = 'JOBaseSDK/**/*'
  #"Classes", "Classes/**/*.{h,m}"
 
