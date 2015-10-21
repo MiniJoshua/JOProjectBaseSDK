@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JOProjectBaseSDK"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "Project Base SDK"
   s.homepage     = "https://github.com/xinlidexiaoman/JOProjectBaseSDK"
   s.license      = "MIT"
