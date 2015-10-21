@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/xinlidexiaoman/JOProjectBaseSDK.git", :tag => s.version}
   s.source_files  = 'JOBaseSDK/**/*'
 
- s.resource = 'JOBaseSDK/Resources/**/*'
+ s.resource = 'JOBaseSDK/Resources/**/*.{txt}'
   #s.resources = ['JOBaseSDK/Resources/**/*.{png}']
 
   # s.framework  = "SomeFramework"
