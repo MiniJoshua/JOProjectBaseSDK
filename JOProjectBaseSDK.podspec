@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JOProjectBaseSDK"
-  s.version      = "1.0.5"
+  s.version      = "1.0.6"
   s.summary      = "Project Base SDK"
   s.homepage     = "https://github.com/xinlidexiaoman/JOProjectBaseSDK"
   s.license      = "MIT"
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/xinlidexiaoman/JOProjectBaseSDK.git", :tag => s.version}
   s.source_files  = 'JOBaseSDK/**/*.{h,m}'
 
-  s.resource = 'JOBaseSDK/Resources/**/*.{png,txt}'
+  s.resource = 'JOBaseSDK/Resources/**/*.{png,txt,a}'
   #s.resources = ['JOBaseSDK/Resources/**/*.{png}']
 
   # s.framework  = "SomeFramework"
@@ -22,7 +22,6 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "MJRefresh"
+  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libsqlite3.0" }
 
 end
