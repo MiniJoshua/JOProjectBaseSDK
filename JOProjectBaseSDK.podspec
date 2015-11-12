@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.resource = 'JOBaseSDK/Resources/**/*.{png,txt,a}'
   #s.resources = ['JOBaseSDK/Resources/**/*.{png}']
 
-  s.framework  = "libsqlite3.0"
+  #s.framework  = "libsqlite3.0"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
