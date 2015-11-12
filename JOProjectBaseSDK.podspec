@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.resource = 'JOBaseSDK/Resources/**/*.{png,txt,a}'
   #s.resources = ['JOBaseSDK/Resources/**/*.{png}']
 
-  # s.framework  = "SomeFramework"
+  s.framework  = "libsqlite3.0"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
@@ -22,6 +22,6 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libsqlite3.0" }
+  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libJOProjectBaseSDK" }
 
 end
