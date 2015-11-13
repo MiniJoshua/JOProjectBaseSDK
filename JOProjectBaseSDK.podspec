@@ -17,8 +17,9 @@ Pod::Spec.new do |s|
   #s.framework  = "sqlite3"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
-  #s.library   = "sqlite3"
-  s.libraries = "sqlite3", "libJOProjectBaseSDK"
+  s.library   = "sqlite3"
+  #s.libraries = "sqlite3", "libJOProjectBaseSDK"
+  s.vendored_libraries = "libJOProjectBaseSDK"
 
   s.requires_arc = true
 
