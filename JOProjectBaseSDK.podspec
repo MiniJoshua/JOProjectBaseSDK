@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   #s.framework  = "libsqlite3.0"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
-  # s.library   = "iconv"
+  s.library   = "libJOProjectBaseSDK"
   # s.libraries = "iconv", "xml2"
 
   s.requires_arc = true
