@@ -10,7 +10,7 @@
 
 @interface JOFDataBaseProperty : NSObject
 
-@property (nonatomic, copy) NSString *DBName;//DB的名字  若是给定名字,则默认DB实在document文件夹中
+@property (nonatomic, copy) NSString *DBName;//DB的名字  若是给定名字,则默认DB是在document文件夹中
 @property (nonatomic, copy) NSString *DBPath;//DB的路径
 
 @property (nonatomic, copy) NSString *tableName;//表的名字

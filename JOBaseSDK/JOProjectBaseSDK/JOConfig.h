@@ -13,6 +13,6 @@
 
 @interface JOConfig : NSObject<Config>
 
-@property (nonatomic, strong) NSString *configDescription;
+@property (nonatomic, copy) NSString *configDescription;
 
 @end

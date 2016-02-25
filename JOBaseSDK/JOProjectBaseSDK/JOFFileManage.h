@@ -36,6 +36,15 @@
 + (BOOL)fileExistAtDocumentWithFileName:(nullable NSString *)fileName;
 
 /**
+ *  文件在该路径是否存在.
+ *
+ *  @param filePath 需要查看文件的路径.
+ *
+ *  @return 文件是否存在的状态.
+ */
++ (BOOL)fileExistAtFilePath:(nullable NSString *)filePath;
+
+/**
  *  在Document中创建一个文件.
  *
  *  @param fileName 文件的状态.

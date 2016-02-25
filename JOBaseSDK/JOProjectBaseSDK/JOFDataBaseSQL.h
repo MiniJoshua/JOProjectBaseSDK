@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param state 执行的状态 YES 成功 NO 失败.
  */
-typedef void(^DBExecuteCompleteBlock)(BOOL state);
+typedef void(^DBExecuteCompleteHandler)(BOOL state);
 
 /**
  *  查询操作执行完的block回调.
@@ -34,7 +34,7 @@ typedef void(^DBExecuteCompleteBlock)(BOOL state);
  *  @param resultArray 查询得到的结果.
  *  @param state       执行的状态 YES 成功 NO 失败.
  */
-typedef void(^DBSelectExecuteCompleteBlock)(NSMutableArray <NSDictionary*> *resultArray);
+typedef void(^DBSelectExecuteCompleteHandler)(NSMutableArray <NSDictionary*> *resultArray);
 
 
 @interface JOFDataBaseSQL : JOFunctionObject
@@ -109,14 +109,14 @@ typedef void(^DBSelectExecuteCompleteBlock)(NSMutableArray <NSDictionary*> *resu
  *
  *  @param sendBlock DBExecuteCompleteBlock.
  */
-- (void)dataBaseExecuteCompleteHandle:(DBExecuteCompleteBlock)sendBlock;
+- (void)dataBaseExecuteCompleteHandler:(DBExecuteCompleteHandler)handler;
 
 /**
  *  查询的数据库操作完成的block回调.
  *
  *  @param sendBlock DBSelectExecuteCompleteBlock.
  */
-- (void)dataBaseSelectExecuteCompleteHandle:(DBSelectExecuteCompleteBlock)sendBlock;
+- (void)dataBaseSelectExecuteCompleteHandler:(DBSelectExecuteCompleteHandler)handler;
 
 @end
 NS_ASSUME_NONNULL_END

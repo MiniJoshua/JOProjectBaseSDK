@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "JODefine.h"
+#import "JOMacro.h"
 
 @protocol FunctionObject
 @end
 
 @interface JOFunctionObject : NSObject<FunctionObject>
 
-@property (nonatomic, strong) NSString *functionDescription;
+@property (nonatomic, copy) NSString *functionDescription;
 
 @end

@@ -62,14 +62,12 @@
 /**
  *  userInfo 为nil.
  *
- *
  *  @see -  createExceptionWithName:reason:userInfo:
  */
 + (NSException *)createExceptionWithName:(NSString *)exceptionName reason:(NSString *)reason;
 
 /**
  *  userInfo 为nil. reason 为@"".
- *
  *
  *  @see -  createExceptionWithName:reason:userInfo:
  */

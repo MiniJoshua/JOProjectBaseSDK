@@ -54,6 +54,7 @@ typedef NS_ENUM(NSInteger, SystemVersion){
     IOS_7,
     IOS_8,
     IOS_9,
+    IOS_Height,
 };
 
 @interface JOFDeviceInfo : JOFunctionObject
@@ -64,6 +65,13 @@ typedef NS_ENUM(NSInteger, SystemVersion){
  *  @return DeviceType
  */
 + (DeviceType)deviceType;
+
+/**
+ *  获取当前系统的版本号.
+ *
+ *  @return 版本号.
+ */
++ (CGFloat)currentSystemVersion;
 
 /**
  *  获取系统的大的版本号.

@@ -49,6 +49,7 @@
 #define Block_WeakSelf              __weak typeof(self)  //ARC
 #define Block_StrongObject(object)  __strong typeof(object)
 
+
 //|---------------------|
 //|---------LOG---------|
 //|---------------------|
@@ -64,7 +65,7 @@
 //|---------ARG Check is nil : Assert---------|
 //|-------------------------------------------|
 
-#define JOArgumentsAssertNotNil(condition, description, ...) NSAssert(condition, description, ##__VA_ARGS__)
+#define JOArgumentsAssertNotNil(condition, description, ...) NSCAssert(condition, description, ##__VA_ARGS__)
 
 //|--------------------------------|
 //|---------String Convert---------|
