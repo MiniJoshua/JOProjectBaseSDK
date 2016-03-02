@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.library   = "sqlite3"
   #s.libraries = "sqlite3", "libJOProjectBaseSDK"
-  s.vendored_libraries = "JOBaseSDK/Resources/libJOProjectBaseSDK.a"
+  s.vendored_libraries = "JOBaseSDK/Resources/JOProjectBaseSDK.a"
 
   #s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 
