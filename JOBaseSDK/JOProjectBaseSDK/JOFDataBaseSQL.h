@@ -54,7 +54,7 @@ typedef void(^DBSelectExecuteCompleteHandler)(NSMutableArray <NSDictionary*> *re
 /**
  *  根据dataBaseProperty的信息检查Table表是否存在.
  */
-- (BOOL)tableExist;
+- (BOOL)tableIsExist;
 
 /**
  *  根据dataBaseProperty的信息插入一条数据到数据库中.

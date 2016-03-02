@@ -10,7 +10,7 @@
 #import "JSONModel.h"
 #import "JOHttpRequestType.h"
 #import "JOHttpsRequestDataConfig.h"
-#import "JOURLRequestDataConfig.h"
+//#import "JOURLRequestDataConfig.h"
 #import "JOURLFileUploadConfig.h"
 #import "JOURLFileDownloadConfig.h"
 
