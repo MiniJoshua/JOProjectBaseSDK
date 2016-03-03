@@ -35,6 +35,7 @@ typedef void(^MissionFailedHandler)  (id failedObject);
 @property (nonatomic, copy) MissionSuccessHandler missionSuccessHandler;
 @property (nonatomic, copy) MissionFailedHandler missionFailedHandler;
 @property (nonatomic, strong) JOConfig *missionConfig;
+@property (nonatomic, strong) id target;
 
 /**
  *  使用该方法开始一个任务,传入一个任务的配置类.
