@@ -8,7 +8,7 @@ Create by Joshua
 
 1.1.15:网络循环引用问题测试解决方案
 
-1.1.16:本次把所有的网络请求返回状态的回调合并到一个方法里面,更方便达到一个网络请求的效果。
+1.1.17:本次把所有的网络请求返回状态的回调合并到一个方法里面,更方便达到一个网络请求的效果。
 现在可以如下操作:
 
     JOHttpsRequestDataConfig *httpRequestDataConfig = [JOHttpsRequestDataConfig new];
