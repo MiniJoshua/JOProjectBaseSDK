@@ -59,25 +59,47 @@ typedef void(^NetManageMissionSuccessHandler) (JSONModelParseHandler parseHandle
 + (void)networkReachabilityMonitoringHandler:(void(^)(JONetworkReachabilityStatus states))handler;
 
 /**
- *  设置网络请求的配置类(config).
+ *  执行一个网络请求.
  *
- *  @param config 网络配置的类.不同的配置类代表不同的网络请求.
+ *  @param config           网络配置的类.不同的配置类代表不同的网络请求.
+ *  @param progressHandler  NetFileOperationProgressHandler 文件上传或下载的进度.
+ *  @param jsonModelHanler  NetManageMissionSuccessHandler 可以将网络返回得到的数据转作为你传入的数据模型对象返回.
+ *                          ps:必须确保返回的数据与你给的数据模型是一一对应的,不然转换会失败.
+ *  @param successHandler   MissionCompleteHandler 任务完成的回调,返回的对象为从服务器得到的数据,已转换为字典类型.
+ *  @param interruptHandler MissionInterruptHandler 任务中断的回调,返回的为任务中断的原因.
  */
-- (void)startNetRequestManageWithConfig:(JOConfig *)config;
++ (void)startNetRequestManageWithConfig:(JOConfig *)config
+                        progressHandler:(NetFileOperationProgressHandler)progressHandler
+                       jsonModelHandler:(NetManageMissionSuccessHandler)jsonModelHandler
+                         successHandler:(MissionCompleteHandler)successHandler
+                       interruptHandler:(MissionInterruptHandler)interruptHandler;
 
-/**
- *  设置网络请求成功并能得到解析为JOSNModel数据模型的Handler的回调.
- *
- *  @param handler NetManageMissionSuccessHandler.
- */
-- (void)netManageMissionSuccessHandler:(NetManageMissionSuccessHandler)handler;
++ (void)startNetRequestManageWithConfig:(JOConfig *)config
+                         successHandler:(MissionCompleteHandler)successHandler
+                       interruptHandler:(MissionInterruptHandler)interruptHandler;
 
-/**
- *  文件上传与下载的进度的Handler.
- *
- *  @param progressHandler NetFileOperationProgressBlock.
- */
-- (void)fileNetOperationProgressHandler:(NetFileOperationProgressHandler)progressHandler;
++ (void)startNetRequestManageWithConfig:(JOConfig *)config
+                       jsonModelHandler:(NetManageMissionSuccessHandler)jsonModelHandler
+                       interruptHandler:(MissionInterruptHandler)interruptHandler;
+
++ (void)startNetRequestManageWithConfig:(JOConfig *)config
+                       jsonModelHandler:(NetManageMissionSuccessHandler)jsonModelHandler
+                         successHandler:(MissionCompleteHandler)successHandler
+                       interruptHandler:(MissionInterruptHandler)interruptHandler;
+
++ (void)startNetRequestManageWithConfig:(JOConfig *)config
+                        progressHandler:(NetFileOperationProgressHandler)progressHandler
+                         successHandler:(MissionCompleteHandler)successHandler
+                       interruptHandler:(MissionInterruptHandler)interruptHandler;
+
++ (void)startNetRequestManageWithConfig:(JOConfig *)config
+                        progressHandler:(NetFileOperationProgressHandler)progressHandler
+                       jsonModelHandler:(NetManageMissionSuccessHandler)jsonModelHandler
+                       interruptHandler:(MissionInterruptHandler)interruptHandler;
+
++ (void)startNetRequestManageWithConfig:(JOConfig *)config
+                        progressHandler:(NetFileOperationProgressHandler)progressHandler
+                       interruptHandler:(MissionInterruptHandler)interruptHandler;
 
 
 @end
