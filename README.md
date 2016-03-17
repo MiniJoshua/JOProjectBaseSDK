@@ -15,22 +15,24 @@ Create by Joshua
 现在要开始一个网络请求只需要自定义你的网络config类的属性即可.
 
 一个完整图片下载与取消的网络示例:
+
     JOFileDownloadConfig *fileDownloadConfig = [JOFileDownloadConfig new];
     [fileDownloadConfig setFileSavePath:[JOFFileManage documentPath] fileSaveName:@"download.jpg" isCleanExistFile:NO];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://p1.pichost.me/i/40/1639665.png"]];
     fileDownloadConfig.request = request;
+    
 //开始
+
     [JONetRequestManage startNetRequestManageWithConfig:fileDownloadConfig requestIdentifier:@"ImageDownload" fileProgressHandler:^(CGFloat progressValue) {
     JOLog(@"progressValue:%f",progressValue);
     } jsonModelHandler:^(JSONModelParseHandler parseHandler) {
-
     } successHandler:^(NSDictionary *response) {
-
     JOLog(@"下载完成:%@",response);
     } failedHandler:^(NSString *failedDescription) {
     JOLog(@"失败的原因:%@",failedDescription);
     }];
 
 //取消
+
     [JONetRequestManage cancelNetRequestWithIdentifier:@"ImageDownload"];
 
