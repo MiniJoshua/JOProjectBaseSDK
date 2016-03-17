@@ -9,17 +9,28 @@ Create by Joshua
 1.1.15:网络循环引用问题测试解决方案
 
 1.1.17:本次把所有的网络请求返回状态的回调合并到一个方法里面,更方便达到一个网络请求的效果。
-现在可以如下操作:
 
-    JOHttpsRequestDataConfig *httpRequestDataConfig = [JOHttpsRequestDataConfig new];
-    [httpRequestDataConfig setHttpURLString:@"你的URL地址" postData:@"需要的参数(字典类型)" requestType:HttpRequestTypePost];
-    [JONetRequestManage startNetRequestManageWithConfig:httpRequestDataConfig progressHandler:^(CGFloat progressValue) {
-        //文件的上传与下载的进度值.
+1.1.18:本次改动针对网络请求这一块:增加了一个identifier的参数来标示一个网络请求,在这个网络未完成之前你随时都能取消这个网络请求.文件下载的网络请求,取消的时候会自动缓存已经下好的数据,你下次继续上次下载完的地方继续下载.
+
+现在要开始一个网络请求只需要自定义你的网络config类的属性即可.
+
+一个完整图片下载与取消的网络示例:
+    JOFileDownloadConfig *fileDownloadConfig = [JOFileDownloadConfig new];
+    [fileDownloadConfig setFileSavePath:[JOFFileManage documentPath] fileSaveName:@"download.jpg" isCleanExistFile:NO];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://p1.pichost.me/i/40/1639665.png"]];
+    fileDownloadConfig.request = request;
+//开始
+    [JONetRequestManage startNetRequestManageWithConfig:fileDownloadConfig requestIdentifier:@"ImageDownload" fileProgressHandler:^(CGFloat progressValue) {
+    JOLog(@"progressValue:%f",progressValue);
     } jsonModelHandler:^(JSONModelParseHandler parseHandler) {
-        //得到具体转换后的数据模型
-    } successHandler:^(id completeObject, NSInteger completeTag) {
-    JOLog(@"得到返回的数据:%@",completeObject);//服务器返回的具体的数据.
-    } interruptHandler:^(id interruptObject, NSInteger interruptTag) {
-    JOLog(@"失败的原因:%@",interruptObject);//网络失败的返回的原因
+
+    } successHandler:^(NSDictionary *response) {
+
+    JOLog(@"下载完成:%@",response);
+    } failedHandler:^(NSString *failedDescription) {
+    JOLog(@"失败的原因:%@",failedDescription);
     }];
+
+//取消
+    [JONetRequestManage cancelNetRequestWithIdentifier:@"ImageDownload"];
 

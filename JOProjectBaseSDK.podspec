@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JOProjectBaseSDK"
-  s.version      = "1.1.17"
+  s.version      = "1.1.18"
   s.summary      = "Project Base SDK"
   s.homepage     = "https://github.com/xinlidexiaoman/JOProjectBaseSDK"
   s.license      = "MIT"
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   #s.resources = ['JOBaseSDK/Resources/**/*.{png}']
 
   #s.framework  = "sqlite3"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
+  s.frameworks = "SystemConfiguration", "Security", "MobileCoreServices", "CoreGraphics"
 
   s.library   = "sqlite3"
   #s.libraries = "sqlite3", "libJOProjectBaseSDK"
