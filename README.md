@@ -24,12 +24,12 @@ Create by Joshua
 //开始
 
     [JONetRequestManage startNetRequestManageWithConfig:fileDownloadConfig requestIdentifier:@"ImageDownload" fileProgressHandler:^(CGFloat progressValue) {
-    JOLog(@"progressValue:%f",progressValue);
+        JOLog(@"progressValue:%f",progressValue);
     } jsonModelHandler:^(JSONModelParseHandler parseHandler) {
     } successHandler:^(NSDictionary *response) {
-    JOLog(@"下载完成:%@",response);
+        JOLog(@"下载完成:%@",response);
     } failedHandler:^(NSString *failedDescription) {
-    JOLog(@"失败的原因:%@",failedDescription);
+        JOLog(@"失败的原因:%@",failedDescription);
     }];
 
 //取消
