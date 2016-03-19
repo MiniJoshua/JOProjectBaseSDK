@@ -18,6 +18,13 @@
 + (nullable NSString *)documentPath;
 
 /**
+ *  temp的文件的路径
+ *
+ *  @return 返回该文件的路径
+ */
++ (nullable NSString *)tempPath;
+
+/**
  *  Document文件夹中该文件的路径.
  *
  *  @param fileName 文件的名字.
