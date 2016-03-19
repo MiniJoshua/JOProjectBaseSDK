@@ -25,6 +25,7 @@ typedef void(^FileStreamUploadRequestHanlder)(NSString *method, NSString *URLStr
  *  @param name     对应的这个文件的参数名.(根据服务器那边的定义)
  *  @param fileName 服务器那边接收到需要的完整文件的名(根据服务器那边的定义).
  *  @param mimeType MIME类型. 比如:图片 则传入@"image/jpeg"
+ *  具体的查看地址:http://www.w3school.com.cn/media/media_mimeref.asp
  *
  *  常见的MIME类型
  *  超文本标记语言文本 .html,.html   -> text/html
@@ -39,6 +40,7 @@ typedef void(^FileStreamUploadRequestHanlder)(NSString *method, NSString *URLStr
  *  AVI文件 .avi                  ->  video/x-msvideo
  *  GZIP文件 .gz                  -> application/x-gzip
  *  TAR文件 .tar                  -> application/x-tar
+ *  WAV文件 .wav                  -> audio/x-wav
  */
 typedef void(^FileStreamSynthHandler) (NSData *fileData, NSString *name, NSString *fileName, NSString *mimeType);
 
