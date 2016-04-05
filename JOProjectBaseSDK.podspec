@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JOProjectBaseSDK"
-  s.version      = "1.1.19"
+  s.version      = "1.1.20"
   s.summary      = "Project Base SDK"
   s.homepage     = "https://github.com/xinlidexiaoman/JOProjectBaseSDK"
   s.license      = "MIT"
@@ -34,7 +34,7 @@ ss.source_files = 'JOBaseSDK/**/JSON{Model,KeyMapper,ModelArray,ModelError,Value
 end
 
 s.subspec 'Extend' do |ss|
-ss.source_files = 'JOBaseSDK/**/{UIColor+JOExtend}.h'
+ss.source_files = 'JOBaseSDK/**/{UIColor+JOExtend,NSString+JOExtend,NSObject+JOExtend}.h'
 end
 
 s.subspec 'Manage' do |ss|

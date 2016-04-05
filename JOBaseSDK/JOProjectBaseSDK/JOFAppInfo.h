@@ -20,7 +20,8 @@
 /**
  *  应用bulid的版本号.
  *
- *  @return app build的版本号,自己定义的.若app提交到了itunesContent之后,你又想重新提交一个新的到里面去,只需要两个build版本不同即可,否则只能更改版本号,不然会提交失败.
+ *  @return app build的版本号,自己定义的.若app提交到了itunesContent之后,你又想重新提交一个新的到里面去,
+ *  只需要两个build版本不同即可,否则只能更改版本号,不然会提交失败.
  */
 + (NSString *)appBuildVersion;
 

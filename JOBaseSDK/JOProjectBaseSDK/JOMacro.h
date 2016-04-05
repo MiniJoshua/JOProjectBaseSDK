@@ -84,7 +84,7 @@
 /*
  在扩展协议(Category)的implementation前面添加该宏,
  可以不用在taget里面添加-all_load 或 -force_load
- 使编译静态库中的扩展协议(Category)的时候出现编译链接的错误.
+ 使编译静态库中的扩展协议(Category)的时候出现方法命名存在但是执行的时候却找不到该方法而crash.
  查看:http://developer.apple.com/library/mac/#qa/qa2006/qa1490.html
  */
 
