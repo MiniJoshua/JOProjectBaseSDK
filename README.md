@@ -5,6 +5,7 @@ Create by Joshua
 使用:pod 'JOProjectBaseSDK' 即可
 
 1.1.20:增加NSString和NSObject的部分扩展,添加了新的功能. 
+
 现在你想使用performSelector调用多个参数的方法就是这么的简单(若出现找不到方法的异常的时候,请在TARGETS->Build Settings->Other Linker Flags里面添加 -ObjC,下个版本会修复如果是通过Pod命令部署的话会在里面自动添加该条属性)
 
     [self JOPerformSelector:@selector(test:par2:par3:) arguments:@"par1",12345,@[@"qqq",@"www",@"eee"]];
