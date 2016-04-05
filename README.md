@@ -4,6 +4,14 @@ Create by Joshua
 
 使用:pod 'JOProjectBaseSDK' 即可
 
+1.1.20:增加NSString和NSObject的部分扩展,添加了新的功能. 
+现在你想使用performSelector调用多个参数的方法就是这么的简单(若出现找不到方法的异常的时候,请在TARGETS->Build Settings->Other Linker Flags里面添加 -ObjC,下个版本会修复如果是通过Pod命令部署的话会在里面自动添加该条属性)
+
+    [self JOPerformSelector:@selector(test:par2:par3:) arguments:@"par1",12345,@[@"qqq",@"www",@"eee"]];
+    [self JOPerformSelector:@selector(test:par2:par3:) afterDelay:10. arguments:@"par1",12345,@[@"qqq",@"www",@"eee"]];
+
+
+
 1.1.19:本次修复了一个BUG:取消一个下载任务的时候,等想恢复的时候想删除原来的缓存好的数据,却只删除了缓存信息,而未真正删除缓存文件的的错误.
 
     增加了对一个下载任务,如果资源的URL是有时效的,每一次请求资源的URL都会发生改变的处理。
