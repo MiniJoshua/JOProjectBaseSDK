@@ -6,7 +6,7 @@
 //  Copyright © 2015年 刘维. All rights reserved.
 //
 
-#import "JOConfig.h"
+#import "JORequestConfig.h"
 
 //MARK: 这两个handler用来处理文件以文件流的形式作为http body体里面的一个参数传给服务器的时候
 /**
@@ -52,7 +52,7 @@ typedef void(^FileStreamSynthHandler) (NSData *fileData, NSString *name, NSStrin
  */
 typedef void(^FileStreamURLRequestHandler) (FileStreamUploadRequestHanlder requestHandler, FileStreamSynthHandler fileDataHandler);
 
-@interface JOFileUploadConfig : JOConfig
+@interface JOFileUploadConfig : JORequestConfig
 
 //要上传的文件的路径. PS:会优先取该值,若该值为空的时候,然后才会取fileData的值.
 //若同时设置了这两个值,则filaData则不会被用来作为文件的数据.

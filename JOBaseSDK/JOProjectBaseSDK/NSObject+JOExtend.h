@@ -59,11 +59,32 @@
 + (NSArray *)JOGetAllSelector;
 
 /**
- *  获取所有property的属性.
+ *  获取该类中所有property的属性(包括父类的,NSObject除外).
  *
- *  @return 所有property属性名的字符串.
+ *  @return 所有的property属性名的字符串的array.
  */
 + (NSArray *)JOGetAllProperty;
+
+/**
+ *  获取该类中所有的property的属性名跟值的键值对(包括父类的,NSObject除外)
+ *
+ *  @return 所有该类中的属性值作为key,值作为value的字典类型(如果value为nil的话,则不会在其中)
+ */
+- (NSDictionary *)JOGetAllPropertyDictionary;
+
+/**
+ *  获取本类中所有的property属性.
+ *
+ *  @return 所有的property属性的字符串的array.
+ */
++ (NSArray *)JOGetProperty;
+
+/**
+ *  获取本类中所有的属性跟值的键值对.
+ *
+ *  @return 本类中所有的属性跟值的键值对.
+ */
+- (NSDictionary *)JOGetProjectDictionary;
 
 /**
  *  获取该类中所有的变量名
@@ -75,7 +96,7 @@
 /**
  *  所有类中所支持的协议.
  *
- *  @return 所有该类中所支持的协议的字符转.
+ *  @return 所有该类中所支持的协议的字符串.
  */
 + (NSArray *)JOGetAllProtocol;
 

@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JOProjectBaseSDK"
-  s.version      = "1.1.20"
+  s.version      = "1.1.21"
   s.summary      = "Project Base SDK"
   s.homepage     = "https://github.com/xinlidexiaoman/JOProjectBaseSDK"
   s.license      = "MIT"
@@ -21,12 +21,12 @@ Pod::Spec.new do |s|
   #s.libraries = "sqlite3", "libJOProjectBaseSDK"
   s.vendored_libraries = "JOBaseSDK/Resources/libJOProjectBaseSDK.a"
 
-  #s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
+  s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 
   s.requires_arc = true
 
 s.subspec 'Function' do |ss|
-ss.source_files = 'JOBaseSDK/**/JO{DataRequestConfig,FileDownloadConfig,FileUploadConfig,HttpRequestType,FAppInfo,FAutoLayout,FCrash,FDataBase,FDataBaseProperty,FDataBaseSQL,FDeviceInfo,FException,FFileManage,FLog,FunctionDefine,FunctionObject,NetRequestManage}.h'
+ss.source_files = 'JOBaseSDK/**/JO{DataRequestConfig,FileDownloadConfig,FileUploadConfig,HttpRequestType,FAppInfo,FAutoLayout,FCrash,FDataBase,FDataBaseProperty,FDataBaseSQL,FDeviceInfo,FException,FFileManage,FLog,FunctionDefine,FunctionObject,NetRequestManage,Layout,LayoutItem}.h'
 end
 
 s.subspec 'JSONModel' do |ss|
@@ -34,11 +34,7 @@ ss.source_files = 'JOBaseSDK/**/JSON{Model,KeyMapper,ModelArray,ModelError,Value
 end
 
 s.subspec 'Extend' do |ss|
-ss.source_files = 'JOBaseSDK/**/{UIColor+JOExtend,NSString+JOExtend,NSObject+JOExtend}.h'
-end
-
-s.subspec 'Manage' do |ss|
-ss.source_files = 'JOBaseSDK/**/JO{Mission,Manage,Config}.h'
+ss.source_files = 'JOBaseSDK/**/{UIColor+JOExtend,NSString+JOExtend,NSObject+JOExtend,UIView+JOExtend,UIImage+JOExtend,UIFont+JOExtend,UILabel+JOExtend,NSArray+JOExtend}.h'
 end
 
 s.subspec 'Macro' do |ss|

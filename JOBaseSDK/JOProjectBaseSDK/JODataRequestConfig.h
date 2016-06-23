@@ -6,10 +6,10 @@
 //  Copyright © 2015年 刘维. All rights reserved.
 //
 
-#import "JOConfig.h"
+#import "JORequestConfig.h"
 #import "JOHttpRequestType.h"
 
-@interface JODataRequestConfig : JOConfig
+@interface JODataRequestConfig : JORequestConfig
 
 //网络请求的http的地址.
 @property (nonatomic, copy) NSString *httpURLString;

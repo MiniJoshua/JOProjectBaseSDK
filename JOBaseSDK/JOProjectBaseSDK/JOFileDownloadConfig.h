@@ -6,9 +6,9 @@
 //  Copyright © 2015年 刘维. All rights reserved.
 //
 
-#import "JOConfig.h"
+#import "JORequestConfig.h"
 
-@interface JOFileDownloadConfig : JOConfig
+@interface JOFileDownloadConfig : JORequestConfig
 
 /*文件下载过程中如果cancel掉该下载任务,会默认把已经下载的数据存在一个temp的文件中,
  你继续下载的时候会根据给定的identifier去继续下载该任务,如果你想测试该功能请下载一个相对比较大一点的文件,

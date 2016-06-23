@@ -237,9 +237,9 @@ JO_EXTERN BOOL JOStringIsValidIDCardNum(NSString *string);
  *  @param block       每一次检索出符合条件的字符串该block都会回调.
  *                     matchString:符合条件的字符串 matchRange:Range stop:是否停止检索 -> *stop = YES 则会停止该block
  */
-- (void)JOEumerateMatchesWithRegex:(NSString *)regexString
-                           options:(NSRegularExpressionOptions)options
-                        usingBlock:(void (^)(NSString *matchString, NSRange matchRange, BOOL *stop))block;
+- (void)JOEnumerateMatchesWithRegex:(NSString *)regexString
+                            options:(NSRegularExpressionOptions)options
+                         usingBlock:(void (^)(NSString *matchString, NSRange matchRange, BOOL *stop))block;
 
 /**
  *  替换正则表达式匹配出来的字符串.

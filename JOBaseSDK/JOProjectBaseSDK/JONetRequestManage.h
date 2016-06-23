@@ -36,6 +36,7 @@ typedef void(^NetFileOperationProgressHandler)(CGFloat progressValue);
  *
  *  @return 返回解析后的数据模型.
  */
+//TODO: 可以需改成传入多个Model类型,因为很多时候,数据返回可能存在不同的形式,这个时候需要不同的Model去解析
 typedef id(^JSONModelParseHandler) (JSONModel *josnModel);
 
 /**
@@ -96,7 +97,7 @@ typedef void(^NetRequestFailedHandler) (NSString *failedDescription);
  *  @param successHandler   MissionCompleteHandler 任务完成的回调,返回的对象为从服务器得到的数据,已转换为字典类型.
  *  @param interruptHandler MissionInterruptHandler 任务中断的回调,返回的为任务中断的原因.
  */
-+ (void)startNetRequestWithConfig:(JOConfig *)config
++ (void)startNetRequestWithConfig:(JORequestConfig *)config
                 requestIdentifier:(NSString *)identifier
               fileProgressHandler:(NetFileOperationProgressHandler)progressHandler
                  jsonModelHandler:(NetReqeustDataParseHandler)jsonModelHandler
@@ -106,35 +107,35 @@ typedef void(^NetRequestFailedHandler) (NSString *failedDescription);
 
 /*你需要的应该下面方法中的一种,请自行根据自己需要的网络处理的handler进行选择*/
 
-+ (void)startNetRequestWithConfig:(JOConfig *)config
++ (void)startNetRequestWithConfig:(JORequestConfig *)config
                 requestIdentifier:(NSString *)identifier
                    successHandler:(NetRequestSuccessHandler)successHandler
                     failedHandler:(NetRequestFailedHandler)failedHandler;
 
-+ (void)startNetRequestWithConfig:(JOConfig *)config
++ (void)startNetRequestWithConfig:(JORequestConfig *)config
                 requestIdentifier:(NSString *)identifier
                  jsonModelHandler:(NetReqeustDataParseHandler)jsonModelHandler
                     failedHandler:(NetRequestFailedHandler)failedHandler;
 
-+ (void)startNetRequestWithConfig:(JOConfig *)config
++ (void)startNetRequestWithConfig:(JORequestConfig *)config
                 requestIdentifier:(NSString *)identifier
                  jsonModelHandler:(NetReqeustDataParseHandler)jsonModelHandler
                    successHandler:(NetRequestSuccessHandler)successHandler
                     failedHandler:(NetRequestFailedHandler)failedHandler;
 
-+ (void)startNetRequestWithConfig:(JOConfig *)config
++ (void)startNetRequestWithConfig:(JORequestConfig *)config
                 requestIdentifier:(NSString *)identifier
               fileProgressHandler:(NetFileOperationProgressHandler)progressHandler
                    successHandler:(NetRequestSuccessHandler)successHandler
                     failedHandler:(NetRequestFailedHandler)failedHandler;
 
-+ (void)startNetRequestWithConfig:(JOConfig *)config
++ (void)startNetRequestWithConfig:(JORequestConfig *)config
                 requestIdentifier:(NSString *)identifier
               fileProgressHandler:(NetFileOperationProgressHandler)progressHandler
                  jsonModelHandler:(NetReqeustDataParseHandler)jsonModelHandler
                     failedHandler:(NetRequestFailedHandler)failedHandler;
 
-+ (void)startNetRequestWithConfig:(JOConfig *)config
++ (void)startNetRequestWithConfig:(JORequestConfig *)config
                 requestIdentifier:(NSString *)identifier
               fileProgressHandler:(NetFileOperationProgressHandler)progressHandler
                     failedHandler:(NetRequestFailedHandler)failedHandler;
