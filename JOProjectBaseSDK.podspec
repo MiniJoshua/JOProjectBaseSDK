@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JOProjectBaseSDK"
-  s.version      = "1.1.23"
+  s.version      = "1.1.24"
   s.summary      = "Project Base SDK"
   s.homepage     = "https://github.com/xinlidexiaoman/JOProjectBaseSDK"
   s.license      = "MIT"
@@ -26,7 +26,11 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
 s.subspec 'Function' do |ss|
+
+s.subspec 'Functionss' do |sss|
 ss.source_files = 'JOBaseSDK/**/JO{DataRequestConfig,FileDownloadConfig,FileUploadConfig,HttpRequestType,FAppInfo,FAutoLayout,FCrash,FDataBase,FDataBaseProperty,FDataBaseSQL,FDeviceInfo,FException,FFileManage,FLog,FunctionDefine,FunctionObject,NetRequestManage,Layout,LayoutItem,RequestConfig}.h'
+end
+
 end
 
 s.subspec 'JSONModel' do |ss|
